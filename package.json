@@ -13,6 +13,7 @@
 	"dependencies": {
 		"prototypes": "*",
 		"pg": "^4.1.1",
+		"stdio": "^0.2.7",
 		"testing": "*"
 	},
 	"keywords" : ["pooled-pg", "postgres", "PostgreSQL", "database", "pooling", "pool", "pooled", "pg"],
