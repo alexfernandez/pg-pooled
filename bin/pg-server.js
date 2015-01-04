@@ -13,7 +13,7 @@ var packageJson = require(__dirname + '/../package.json');
 
             
 // constants
-var PORT = 5432;
+var PORT = 5433;
 
 // init
 var options = stdio.getopt({
@@ -28,11 +28,18 @@ if (options.version)
 	console.log('Loadtest version: %s', packageJson.version);
 	process.exit(0);
 }
-if (options.args.length > 0)
+if (options.args && options.args.length > 0)
 {
 	console.error('Too many arguments: %s', options.args);
 	options.printHelp();
 	process.exit(1);
 }
-server.start(options);
+server.start(options, function(error)
+{
+	if (error)
+	{
+		return console.error('Could not start server on port %s: %s', options.port, error);
+	}
+	console.log('Pooled PostgreSQL server started on port %s', options.port);
+});
 
