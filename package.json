@@ -1,21 +1,21 @@
 {
-	"name": "pg-pooled",
+	"name": "pooled-pg",
 	"version": "0.0.1",
 	"description": "A driver to PostgreSQL that is compatible with pg, with more effective pooling strategies.",
-	"homepage": "https://github.com/alexfernandez/pg-pooled",
+	"homepage": "https://github.com/alexfernandez/pooled-pg",
 	"contributors": ["Alex Fernández <alexfernandeznpm@gmail.com>"],
 	"license": "MIT",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/alexfernandez/pg-pooled"
+		"url": "https://github.com/alexfernandez/pooled-pg"
 	},
 	"dependencies": {
 		"prototypes": "*",
 		"pg": "^4.1.1",
 		"testing": "*"
 	},
-	"keywords" : ["pg-pooled", "postgres", "PostgreSQL", "database", "pooling", "pool"],
+	"keywords" : ["pooled-pg", "postgres", "PostgreSQL", "database", "pooling", "pool", "pooled", "pg"],
 	"engines": {
 		"node": "*"
 	},
