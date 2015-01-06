@@ -18,6 +18,7 @@ var options = stdio.getopt({
 	host: {key: 'h', args: 1, description: 'Host to connect to'},
 	concurrency: {key: 'c', args: 1, description: 'Number of simultaneous clients'},
 	number: {key: 'n', args: 1, description: 'Total number of queries'},
+	query: {key: 'q', args: 1, description: 'Query to run', default: 'select current_user'},
 });
 if (options.version)
 {
