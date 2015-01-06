@@ -19,6 +19,8 @@ var options = stdio.getopt({
 	concurrency: {key: 'c', args: 1, description: 'Number of simultaneous clients'},
 	number: {key: 'n', args: 1, description: 'Total number of queries'},
 	query: {key: 'q', args: 1, description: 'Query to run', default: 'select current_user'},
+	silent: {key: 's', description: 'Do not log any messages'},
+	debug: {key: 'd', description: 'Show debug messages'},
 });
 if (options.version)
 {
