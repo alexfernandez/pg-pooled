@@ -23,7 +23,7 @@ var options = stdio.getopt({
 	version: {key: 'v', description: 'Display version and quit'},
 	port: {key: 'p', args: 1, description: 'Port to connect to', default: PORT},
 	host: {key: 'h', args: 1, description: 'Host to connect to'},
-	quiet: {key: 'q', description: 'Do not log any messages'},
+	silent: {key: 's', description: 'Do not log any messages'},
 	debug: {key: 'd', description: 'Show debug messages'},
 });
 if (options.version)
