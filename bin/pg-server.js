@@ -7,11 +7,14 @@
  */
 
 // requires
+var Log = require('log');
 var stdio = require('stdio');
 var server = require('../lib/server.js');
 var packageJson = require(__dirname + '/../package.json');
 
-            
+// globals
+var log = new Log('info');
+
 // constants
 var PORT = 5433;
 
@@ -20,8 +23,8 @@ var options = stdio.getopt({
 	version: {key: 'v', description: 'Display version and quit'},
 	port: {key: 'p', args: 1, description: 'Port to connect to', default: PORT},
 	host: {key: 'h', args: 1, description: 'Host to connect to'},
-	quiet: {description: 'Do not log any messages'},
-	debug: {description: 'Show debug messages'},
+	quiet: {key: 'q', description: 'Do not log any messages'},
+	debug: {key: 'd', description: 'Show debug messages'},
 });
 if (options.version)
 {
@@ -40,6 +43,6 @@ server.start(options, function(error)
 	{
 		return console.error('Could not start server on port %s: %s', options.port, error);
 	}
-	console.log('Pooled PostgreSQL server started on port %s', options.port);
+	log.info('Pooled PostgreSQL server started on port %s', options.port);
 });
 
