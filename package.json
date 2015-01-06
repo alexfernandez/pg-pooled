@@ -14,6 +14,8 @@
 		"prototypes": "*",
 		"pg": "^4.1.1",
 		"stdio": "^0.2.7",
+		"log": "^1.4.0",
+		"microprofiler": "*",
 		"testing": "*"
 	},
 	"keywords" : ["pooled-pg", "postgres", "PostgreSQL", "database", "pooling", "pool", "pooled", "pg"],
