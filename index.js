@@ -20,4 +20,5 @@ exports.PooledClient = pooled.PooledClient;
 exports.RemoteClient = remote.RemoteClient;
 exports.connect = connect.connect;
 exports.Client = connect.Client;
+exports.end = connect.end;
 
