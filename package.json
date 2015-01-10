@@ -29,6 +29,7 @@
 	},
 	"bin": {
 		"pg-server": "bin/pg-server.js"
+		"pg-loadtest": "bin/pg-loadtest.js"
 	},
 	"private": false
 }
