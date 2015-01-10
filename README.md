@@ -77,7 +77,7 @@ On the PostgreSQL server install `pooled-pg` globally:
 
 And then start a server, by default on port 5433:
 
-    $ pg-server
+    $ pooled-server
 
 You will probably want to set up an init or Upstart script to keep it running across reboots.
 
@@ -105,13 +105,17 @@ pooled.connect(address, function(error, client, done)
 
 ### Loadtest Your Server
 
-If you want to see how your server behaves, you can use the command `pg-loadtest`:
+If you want to see how your server behaves, you can use the command `pooled-loadtest`:
 
-    $ pg-loadtest remote://user:password@server:5432/database -n 10000
+    $ pooled-loadtest remote://user:password@server:5432/database -n 10000
 
 for a pooled server, or for a remote setup:
 
-    $ pg-loadtest remote://user:password@server:5432/database -n 10000
+    $ pooled-loadtest remote://user:password@server:5432/database -n 10000
+
+Check out some more options with:
+
+    $ pooled-loadtest --help
 
 ### Caveats
 

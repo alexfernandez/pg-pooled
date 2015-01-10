@@ -28,8 +28,8 @@
 		"test": "node test.js"
 	},
 	"bin": {
-		"pg-server": "bin/pg-server.js",
-		"pg-loadtest": "bin/pg-loadtest.js"
+		"pooled-server": "bin/pooled-server.js",
+		"pooled-loadtest": "bin/pooled-loadtest.js"
 	},
 	"private": false
 }
