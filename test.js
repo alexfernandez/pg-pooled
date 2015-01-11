@@ -15,7 +15,14 @@ var testing = require('testing');
 exports.test = function(callback)
 {
 	var tests = {};
-	var libs = ['server', 'pooled', 'remote', 'connect', 'loadtest'];
+	var libs = [
+		'server',
+		'pooled',
+		'remote',
+		'connect',
+		'loadtest',
+		'protocol',
+	];
 	libs.forEach(function(lib)
 	{
 		tests[lib] = require('./lib/' + lib + '.js').test;
