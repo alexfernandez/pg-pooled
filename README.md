@@ -117,9 +117,12 @@ Check out some more options with:
 
     $ pooled-loadtest --help
 
-### Caveats
+### Caveats of Remote Mode
 
 A few remarks are in order.
+
+Currently the remote mode is just a proof of concept: it will only work for queries that can be returned in one TCP packet.
+This limitation will be removed soon, hopefully.
 
 If you use `pooled-pg` in remote mode, keep in mind that the user and password for PostgreSQL
 are travelling in the clear;
