@@ -121,8 +121,8 @@ Check out some more options with:
 
 A few remarks are in order.
 
-Currently the remote mode is just a proof of concept: it will only work for queries that can be returned in one TCP packet.
-This limitation will be removed soon, hopefully.
+The remote mode is now able to send and receive messages longer than a TCP packet.
+The protocol has changed in version 0.0.4; please do not mix 0.0.3 server with 0.0.4 remotes or viceversa.
 
 If you use `pooled-pg` in remote mode, keep in mind that the user and password for PostgreSQL
 are travelling in the clear;

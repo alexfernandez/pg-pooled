@@ -1,6 +1,6 @@
 {
 	"name": "pooled-pg",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A driver to PostgreSQL that is compatible with pg, with more effective pooling strategies.",
 	"homepage": "https://github.com/alexfernandez/pooled-pg",
 	"contributors": ["Alex Fernández <alexfernandeznpm@gmail.com>"],
