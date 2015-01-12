@@ -23,6 +23,7 @@ var options = stdio.getopt({
 	version: {key: 'v', description: 'Display version and quit'},
 	port: {key: 'p', args: 1, description: 'Port to connect to', default: PORT},
 	host: {key: 'h', args: 1, description: 'Host to connect to'},
+	cluster: {key: 'c', args: 1, description: 'Enable cluster (multiprocess) mode'},
 	silent: {key: 's', description: 'Do not log any messages'},
 	debug: {key: 'd', description: 'Show debug messages'},
 });
@@ -37,12 +38,12 @@ if (options.args && options.args.length > 0)
 	options.printHelp();
 	process.exit(1);
 }
-server.start(options, function(error)
+server.start(options, function(error, result)
 {
 	if (error)
 	{
 		return console.error('Could not start server on port %s: %s', options.port, error);
 	}
-	log.info('Pooled PostgreSQL server started on port %s', options.port);
+	log.info('PostgreSQL server started on port %s: %s', options.port, result);
 });
 
