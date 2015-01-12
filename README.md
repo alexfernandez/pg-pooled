@@ -61,6 +61,13 @@ If you were using pg `Client`, just use `pooled-pg's Client`:
 
 The rest of you code will remain the same. Your connections are now pooled!
 
+### Defaults
+
+pooled-pg has a set of defaults compatible with [pg's](https://github.com/brianc/node-postgres/wiki/pg#pgdefaults).
+E.g. you can set pool size with:
+
+    pooled.defaults.poolSize = 20;
+
 ## Advanced Usage: Remote Mode
 
 Sometimes the normal usage for the [pg](https://github.com/brianc/node-postgres/) driver is not enough.
