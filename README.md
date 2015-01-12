@@ -81,6 +81,17 @@ And then start a server, by default on port 5433:
 
 You will probably want to set up an init or Upstart script to keep it running across reboots.
 
+### Daemon Options
+
+The following options are available in the server:
+
+* `-v`: display the current version of the server and quit.
+* `-p [port]`: open the server on the given port.
+* `-h [host]`: use the given PostgreSQL host.
+* `-c`: run in cluster mode (see below).
+* `-s`: do not log connection times.
+* `-d`: run in debug mode.
+
 ### Remote Connections
 
 To connect from your frontend servers you just need to modify the connection string
