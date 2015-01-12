@@ -1,6 +1,6 @@
 {
 	"name": "pooled-pg",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "A driver to PostgreSQL that is compatible with pg, with more effective pooling strategies.",
 	"homepage": "https://github.com/alexfernandez/pooled-pg",
 	"contributors": ["Alex Fernández <alexfernandeznpm@gmail.com>"],
@@ -19,7 +19,7 @@
 		"microprofiler": "*",
 		"testing": "*"
 	},
-	"keywords" : ["pooled-pg", "postgres", "PostgreSQL", "database", "pooling", "pool", "pooled", "pg"],
+	"keywords" : ["pooled-pg", "postgres", "PostgreSQL", "database", "pooling", "pool", "pooled", "pg", "cluster"],
 	"engines": {
 		"node": "*"
 	},
