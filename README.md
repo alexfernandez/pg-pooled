@@ -68,6 +68,8 @@ E.g. you can set pool size with:
 
     pooled.defaults.poolSize = 20;
 
+Note: at the present moment, only `pooled.defaults.poolSize` and `pooled.defaults.poolIdleTimeout` are used.
+
 ## Advanced Usage: Remote Mode
 
 Sometimes the normal usage for the [pg](https://github.com/brianc/node-postgres/) driver is not enough.
