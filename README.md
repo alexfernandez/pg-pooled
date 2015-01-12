@@ -114,6 +114,25 @@ pooled.connect(address, function(error, client, done)
 });
 ```
 
+### Cluster Mode
+
+By default the pooled server running in remote mode will only use one processor.
+If you want the server to run in clustered mode, just add `-c` to the command line:
+
+    $ pooled-server -c
+
+In the command line output you will see one "cluster" and as many "pooled" as CPUs there are on your machine
+(two in this example):
+
+```
+[Mon Jan 12 2015 18:41:43 GMT+0100 (CET)] INFO PostgreSQL server started on port 5433: cluster
+[Mon Jan 12 2015 18:41:43 GMT+0100 (CET)] INFO PostgreSQL server started on port 5433: pooled
+[Mon Jan 12 2015 18:41:43 GMT+0100 (CET)] INFO PostgreSQL server started on port 5433: pooled
+```
+
+The first one is the master, and the rest are the workers.
+Now the server will be able to scale with the number of CPUs.
+
 ### Loadtest Your Server
 
 If you want to see how your server behaves, you can use the command `pooled-loadtest`:
